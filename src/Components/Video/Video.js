@@ -4,7 +4,7 @@ import VideoFooter from '../VideoFooter/VideoFooter'
 import './Video.css'
 
 
-const Video = () => {
+const Video = ({color,url,channel,discription,song,likes,shares,messages}) => {
 
     const [playing,setPlaying] = useState(false)
     const videoRef = useRef(null)
@@ -20,18 +20,18 @@ const Video = () => {
     }
 
     return (
-        <div className='video'>
+        <div className='video' style={{backgroundColor:color}}>
             <video
+            className='videoPlayer'
             onClick={handleVideoPress}
             ref={videoRef}
-            className='videoPlayer'
             loop
-            src='https://youtu.be/ZT3ycBPyUZU'
-            >
+            src={url}
+            >why you no work
             </video>
 
-            <VideoSideBar />
-            <VideoFooter />
+            <VideoFooter channel={channel} discription={discription} song={song}/>
+            <VideoSideBar likes={likes} messages={messages} shares={shares}/>
         </div>
     )
 }
