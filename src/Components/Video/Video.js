@@ -20,14 +20,15 @@ const Video = ({color,url,channel,discription,song,likes,shares,messages}) => {
     }
 
     return (
-        <div className='video' style={{backgroundColor:color}}>
+        <div className='video'>
             <video
             className='videoPlayer'
             onClick={handleVideoPress}
             ref={videoRef}
             loop
             src={url}
-            >why you no work
+            >
+        
             </video>
 
             <VideoFooter channel={channel} discription={discription} song={song}/>

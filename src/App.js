@@ -20,10 +20,9 @@ useEffect(()=>{
     <div className="app">
       <div className="app_videos">
         {
-          videos.map((video) =>{
+          videos?.map((video) =>{
             return <Video
-            color={"greenyellow"}
-            url={"https://www.tiktok.com/@elcachorrojr16/video/6976500925527608581?is_copy_url=0&is_from_webapp=v1&sender_device=pc&sender_web_id=6988820333768951297"}
+            url={video.url}
             channel={video.channel}
             discription={video.discription}
             song={video.song}
