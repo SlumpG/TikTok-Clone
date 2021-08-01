@@ -4,9 +4,9 @@ import VideoFooter from '../VideoFooter/VideoFooter'
 import './Video.css'
 
 
-const Video = ({color,url,channel,discription,song,likes,shares,messages}) => {
+const Video = ({url,channel,discription,song,likes,shares,messages}) => {
 
-    const [playing,setPlaying] = useState(false)
+    const [playing,setPlaying] = useState(true)
     const videoRef = useRef(null)
     const handleVideoPress = () =>{
         
